@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>허브디앤씨</title>
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Noto+Sans+KR:wght@100..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+
+  <div class="fixed_wrap">
+    <header class="header">
+      <div class="logo_wrap">
+        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="158" height="38"
+          viewBox="0 0 158 38" class="logo">
+          <defs>
+            <pattern id="pattern" preserveAspectRatio="none" width="100%" height="100%" viewBox="0 0 500 121">
+              <image width="500" height="121"
+                xlink:href="data:image/png;base64,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" />
+            </pattern>
+          </defs>
+          <rect id="허브디앤씨-로고_블랙_" data-name="허브디앤씨-로고(블랙)" width="158" height="38" fill="url(#pattern)" />
+        </svg>
+      </div>
+      <div class="center_wrap">
+        <div class="search_wrap">
+          <input type="text" placeholder="채널명을 검색해주세요.">
+          <p class="search"><i class="ri-search-line"></i></p>
+        </div>
+        <div class="header_desc">
+          <ul class="desc">
+            <li>
+              <div class="hexa">
+                <img src="./img/헥사곤.svg" alt="">
+              </div>
+              <p><strong>Youtube분석</strong></p>
+            </li>
+            <li>
+              <p>게시판</p>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="header_desc2">
+        <ul class="desc2">
+          <li>
+            <p>설정</p>
+          </li>
+          <li>
+            <p>로그인</p>
+          </li>
+        </ul>
+      </div>
+    </header>
+
+    <nav class="nav">
+      <div class="nav_container">
+        <ul>
+          <li>
+            <p class="click1">카테고리 분석</p>
+          </li>
+          <li>
+            <p class="click1">채널 분석</p>
+          </li>
+          <li>
+            <p class="click1">영상 분석</p>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <section class="section1">
+      <div class="section1_box">
+        <div class="box_profile">
+          <div class="box_profile1">
+            <svg width="58" height="64" viewBox="0 0 81 92" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M0.72982 23.2902L40.5 0.575804L80.2702 23.2902V68.7098L40.5 91.4242L0.72982 68.7098V23.2902Z"
+                stroke="#EA2458" />
+            </svg>
+            <img src="./img/엔조이커플.svg" alt="">
+            <p>엔조이커플</p>
+            <div class="box_circle">
+              <i class="ri-check-fill"></i>
+            </div>
+          </div>
+          <div class="box_profile2">
+            <svg width="58" height="64" viewBox="0 0 81 92" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M0.72982 23.2902L40.5 0.575804L80.2702 23.2902V68.7098L40.5 91.4242L0.72982 68.7098V23.2902Z"
+                stroke="#E1E5EC" />
+            </svg>
+            <img src="./img/초승달.svg" alt="">
+            <p>초승달</p>
+          </div>
+          <div class="box_profile3">
+            <svg width="58" height="64" viewBox="0 0 81 92" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M0.72982 23.2902L40.5 0.575804L80.2702 23.2902V68.7098L40.5 91.4242L0.72982 68.7098V23.2902Z"
+                stroke="#E1E5EC" />
+            </svg>
+            <img src="./img/풍월량.svg" alt="">
+            <p>풍월량</p>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <ul>
+          <li class="first">
+            <div class="profile_wrap">
+              <svg width="81" height="92" viewBox="0 0 81 92" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M0.72982 23.2902L40.5 0.575804L80.2702 23.2902V68.7098L40.5 91.4242L0.72982 68.7098V23.2902Z"
+                  stroke="#EA2458" />
+              </svg>
+              <img src="./img/얌무.svg" alt="">
+              <p>얌무</p>
+              <div class="profile_circle">
+                <i class="ri-arrow-left-right-line"></i>
+              </div>
+            </div>
+            <svg width="120" height="140" viewBox="0 0 120 140" fill="none" xmlns="http://www.w3.org/2000/svg"
+              xmlns:xlink="http://www.w3.org/1999/xlink" class="box">
+              <rect width="120" height="140" fill="url(#pattern0_11_3)" />
+              <defs>
+                <pattern id="pattern0_11_3" patternContentUnits="objectBoundingBox" width="1" height="1">
+                  <use xlink:href="#image0_11_3" transform="scale(0.00833333 0.00714286)" />
+                </pattern>
+                <image id="image0_11_3" width="120" height="140"
+                  xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAHgAAACMCAYAAAC3Z23dAAAEn0lEQVR4Ae2asa7jRBiFTUtNQ4VEw1Og7agQEh0lBRJb8gZIS0O3Ej1IPME2i7QdDTwEDdqFm+Q6cezEjjPj2GHQn5Vv7t5V7jpbrDwnXyRfx7FzNZ5vzn/mZJwkJ16bze5r17Q/+Kb7zflulhVVeDHJbjY79k13s3H+3fbPumoy33RPXdM+8r77/ATG1z9eVO7BJM3LNCtv4N0GyfvjoB5LXzjfhsm8KIzd60RvfTJfbn6eXOf7qvbAvVWdxgLyvnYYM2OXLTe/3EJ6fOt3+4d1vQs2Gu77R5wbn4J7JgclX+ehqtz3R7JJkvgQPvZNt+kvZD9eiAPZbIzpAXII4T3XtH8O/CLqjqR0O9/+YWyT5bL+plhvARcJuHOE2Lbh0yTNyier0gFYDHBZuWBsk9l8PbXJ1Tkjg2vH79Fb14bponiR/DNd7gE2fmBvw+jfWd4mb/NFvhPHgJimRQCwmPfeFR+AARxHObo7cjl+yS2xFSI6Q3MQV3UTACxcok28AAawZvm6BFs6KPgSbvRS75EcLFye+0FNDhaHDGB1wORg3UkkOVhcveRgAOuWr36WqbwnB4srmBwsDtiqEzFJHDKA1QGTg3UnkuRgcfWSgwGsW76U829/b+RgcQWTg8UBk4MBjAf3fhbrnqcqhVVMDhaGaxWHHAxgPDhW771RcMw3QNvvFyA5WLxEmwBYLhSHDGB1wKwH3+9jMfs8OVhcveRgAOuWr5hL79C2sx4srmBysDhgcjCA8eChfjfW61gPFlYxOVgYrlUUcjCA8eCxeuuQdpGDxRVMDhYHbCpnuVAcMoDVAZsRDzFsrolvwkkOFlcvORjA8ZUlrOTIjBwsrmBysDhgcjCAj/Ucb4uzL1gPFlYxOVgYrlVccjCA4/Qd5gsvuZGDxRVMDhYHTA4GMB4cu5+Tg4VVTA4WhksOFocL4EsBHPskgvafngiTgy9AxTw2Kw4ZwOqA7QdpfOy0j8XcN+RgcfWyHgxgzdIVc9k9p+2sB4srmBwsDtjUTkwShwxgdcDkYN2JJDlYXL3kYADrlq9z8mSs15KDxRVMDhYHTA4GMB4cq//27ea5aGEVk4OF4ZqCycEAxoN7L4txTw4WVzA5WBywVR2WC8UhA1gdsBlxjBMI2vzmCTA5WFy95GAAv7kMUCrH20fkYHEFk4PFAZODATxef8H7h7FhPVhYxeRgYbhW4cjBAB5W5/HDcfYTOVhcweRgccDkYACP01vw/OFcyMHCKiYHC8MlB4vDBfClAHa+u2bSMnzSElNfTedrn3jfPYup0bT1jMHou2fJoiiflpXjyUrJkt3+mMyz6qdpugKwIOCm6b5KyjJ8cDVbuqr2QBaBbCznWTkPIbyf2Csrtl8u8qrD387wt5EOBufbcDXL/1sU9RcHuP0f7/ffAThuwAZ3kuYhzconPddX9n63/9Y3XWUXAjs+2M63q8WyevwK1LsHIYSPZvNVahOvVbkNdb0D9kjL8da1wbaDGH33ewjhw7s8Tx6vVpvP0rz8dbZY/+V897xXtBm4PSnQb7ao3J+zPeffTf9cXeftLF39vVxvH3sfPjkF8n8cMCACWOxsRgAAAABJRU5ErkJggg==" />
+              </defs>
+            </svg>
+          </li>
+          <li>
+            <p class="vs">vs</p>
+          </li>
+          <li>
+            <svg width="81" height="92" viewBox="0 0 81 92" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M0.72982 23.2902L40.5 0.575804L80.2702 23.2902V68.7098L40.5 91.4242L0.72982 68.7098V23.2902Z"
+                stroke="#FED317" />
+            </svg>
+            <img src="./img/장삐쭈.svg" alt="">
+            <p>장삐쭈</p>
+            <div class="profile_circle2"><i class="ri-bookmark-fill"></i></div>
+          </li>
+          <li>
+            <svg width="81" height="92" viewBox="0 0 81 92" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M0.72982 23.2902L40.5 0.575804L80.2702 23.2902V68.7098L40.5 91.4242L0.72982 68.7098V23.2902Z"
+                stroke="#E1E5EC" />
+            </svg>
+            <img src="./img/초승달.svg" alt="">
+            <p>초승달</p>
+            <div class="profile_circle2"><i class="ri-bookmark-fill"></i></div>
+          </li>
+          <li>
+            <svg width="81" height="92" viewBox="0 0 81 92" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M0.72982 23.2902L40.5 0.575804L80.2702 23.2902V68.7098L40.5 91.4242L0.72982 68.7098V23.2902Z"
+                stroke="#E1E5EC" />
+            </svg>
+            <img src="./img/풍월량.svg" alt="">
+            <p>풍월량</p>
+            <div class="profile_circle3"><i class="ri-bookmark-line"></i></div>
+          </li>
+          <li>
+            <svg width="81" height="92" viewBox="0 0 81 92" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M0.72982 23.2902L40.5 0.575804L80.2702 23.2902V68.7098L40.5 91.4242L0.72982 68.7098V23.2902Z"
+                stroke="#E1E5EC" />
+            </svg>
+            <img src="./img/선바.svg" alt="">
+            <p>선바</p>
+            <div class="profile_circle3"><i class="ri-bookmark-line"></i></div>
+          </li>
+          <li>
+            <svg width="81" height="92" viewBox="0 0 81 92" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M0.72982 23.2902L40.5 0.575804L80.2702 23.2902V68.7098L40.5 91.4242L0.72982 68.7098V23.2902Z"
+                stroke="#E1E5EC" />
+            </svg>
+            <img src="./img/엔조이커플.svg" alt="">
+            <p>엔조이커플</p>
+            <div class="profile_circle3"><i class="ri-bookmark-line"></i></div>
+          </li>
+          <li>
+            <svg width="81" height="92" viewBox="0 0 81 92" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M0.72982 23.2902L40.5 0.575804L80.2702 23.2902V68.7098L40.5 91.4242L0.72982 68.7098V23.2902Z"
+                stroke="#E1E5EC" />
+            </svg>
+            <img src="./img/도티.svg" alt="">
+            <p>도티</p>
+            <div class="profile_circle3"><i class="ri-bookmark-line"></i></div>
+          </li>
+          <li>
+            <svg width="81" height="92" viewBox="0 0 81 92" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M0.72982 23.2902L40.5 0.575804L80.2702 23.2902V68.7098L40.5 91.4242L0.72982 68.7098V23.2902Z"
+                stroke="#E1E5EC" />
+            </svg>
+            <img src="./img/엔조이커플2.svg" alt="">
+            <p>엔조이커플</p>
+            <div class="profile_circle3"><i class="ri-bookmark-line"></i></div>
+          </li>
+          <li>
+            <svg width="81" height="92" viewBox="0 0 81 92" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M0.72982 23.2902L40.5 0.575804L80.2702 23.2902V68.7098L40.5 91.4242L0.72982 68.7098V23.2902Z"
+                stroke="#E1E5EC" />
+            </svg>
+            <img src="./img/떵개떵.svg" alt="">
+            <p>떵개떵</p>
+            <div class="profile_circle3"><i class="ri-bookmark-line"></i></div>
+          </li>
+          <li class="last">
+            <svg width="81" height="92" viewBox="0 0 81 92" fill="none" xmlns="http://www  w3.org/2000/svg">
+              <path
+                d="M35.4662 2.875L38.8221 0.958333L39.0701 1.39251L40.5 0.575804L41.93 1.39251L42.1779 0.958335L45.5338 2.875L45.2858 3.30918L48.6416 5.22584L48.8896 4.79167L52.2455 6.70833L51.9975 7.14251L55.3533 9.05917L55.6013 8.625L58.9572 10.5417L58.7092 10.9758L62.065 12.8925L62.313 12.4583L65.6689 14.375L65.4209 14.8092L68.7767 16.7258L69.0247 16.2917L72.3806 18.2083L72.1326 18.6425L75.4884 20.5592L75.7364 20.125L79.0923 22.0417L78.8443 22.4758L80.2702 23.2902V24.9167H80.7702V28.75H80.2702V32.5833H80.7702V36.4167H80.2702V40.25H80.7702V44.0833H80.2702V47.9167H80.7702V51.75H80.2702V55.5833H80.7702V59.4167H80.2702V63.25H80.7702V67.0833H80.2702V68.7098L78.8443 69.5242L79.0923 69.9583L75.7364 71.875L75.4884 71.4408L72.1326 73.3575L72.3806 73.7917L69.0247 75.7083L68.7767 75.2742L65.4209 77.1908L65.6689 77.625L62.313 79.5417L62.065 79.1075L58.7092 81.0242L58.9572 81.4583L55.6013 83.375L55.3533 82.9408L51.9975 84.8575L52.2455 85.2917L48.8896 87.2083L48.6416 86.7742L45.2858 88.6908L45.5338 89.125L42.1779 91.0417L41.9299 90.6075L40.5 91.4242L39.07 90.6075L38.8221 91.0417L35.4662 89.125L35.7142 88.6908L32.3584 86.7742L32.1104 87.2083L28.7545 85.2917L29.0025 84.8575L25.6467 82.9408L25.3987 83.375L22.0428 81.4583L22.2908 81.0242L18.935 79.1075L18.687 79.5417L15.3311 77.625L15.5791 77.1908L12.2233 75.2742L11.9753 75.7083L8.61944 73.7917L8.86742 73.3575L5.51157 71.4408L5.26359 71.875L1.90774 69.9583L2.15572 69.5242L0.72982 68.7098V67.0833H0.22982V63.25H0.72982V59.4167H0.22982V55.5833H0.72982V51.75H0.22982V47.9167H0.72982V44.0833H0.22982V40.25H0.72982V36.4167H0.22982V32.5833H0.72982V28.75H0.22982V24.9167H0.72982V23.2902L2.15572 22.4758L1.90775 22.0417L5.2636 20.125L5.51157 20.5592L8.86742 18.6425L8.61944 18.2083L11.9753 16.2917L12.2233 16.7258L15.5791 14.8092L15.3311 14.375L18.687 12.4583L18.935 12.8925L22.2908 10.9758L22.0428 10.5417L25.3987 8.625L25.6467 9.05918L29.0025 7.14251L28.7545 6.70833L32.1104 4.79167L32.3584 5.22584L35.7142 3.30918L35.4662 2.875Z"
+                stroke="#E1E5EC" stroke-dasharray="4 4" />
+            </svg>
+            <img src="./img/추가.svg" alt="">
+          </li>
+
+
+        </ul>
+        <div class="scroll-bar">
+          <div class="scroll-bar_inner"></div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <div class="wrapper">
+    <section class="section2 container">
+      <div class="section2_wrap">
+        <div class="profile">
+          <svg width="39" height="44" viewBox="0 0 81 92" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M0.72982 23.2902L40.5 0.575804L80.2702 23.2902V68.7098L40.5 91.4242L0.72982 68.7098V23.2902Z"
+              stroke="#C7C7C7" />
+          </svg>
+          <img src="./img/얌무.svg" alt="">
+        </div>
+        <div class="section2_txt">
+          <p><strong>얌무</strong>님은 <strong>'먹방'</strong> 에서 상위 <strong class="red">12%</strong>예요!</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section3 container">
+      <div class="section3_main_txt">
+        <p>동일 카테고리의 <strong>경쟁률이 높은 채널을</strong> 비교해보세요!</p>
+      </div>
+      <ul class="section3_nav">
+        <li>
+          <p class="click2">구독자수 성장률</p>
+        </li>
+        <li>
+          <p class="click2">조회수 성장률</p>
+        </li>
+        <li> 
+          <p class="click2">업로드영상 증가율</p>
+        </li>
+      </ul>
+      <ul class="section3_profile">
+        <li>
+          <img src="./img/입 짧은 햇님.svg" alt="">
+          <p>입짧은 햇님</p>
+          <p>238만명</p>
+          <div class="profile_circle4">
+            <p>50</p>
+            <p>%</p>
+          </div>
+        </li>
+        <li>
+          <img src="./img/쯔양.svg" alt="">
+          <p>쯔양</p>
+          <p>238만명</p>
+          <div class="profile_circle4">
+            <p>50</p>
+            <p>%</p>
+          </div>
+        </li>
+        <li>
+          <img src="./img/밴쯔.svg" alt="">
+          <p>밴쯔</p>
+          <p>238만명</p>
+          <div class="profile_circle4">
+            <p>50</p>
+            <p>%</p>
+          </div>
+        </li>
+        <li>
+          <img src="./img/변승주.svg" alt="">
+          <p>공대생 변승주</p>
+          <p>238만명</p>
+          <div class="profile_circle4">
+            <p>50</p>
+            <p>%</p>
+          </div>
+        </li>
+        <li>
+          <img src="./img/햄찌.svg" alt="">
+          <p>햄찌</p>
+          <p>238만명</p>
+          <div class="profile_circle4">
+            <p>50</p>
+            <p>%</p>
+          </div>
+        </li>
+        <li>
+          <img src="./img/밴쯔.svg" alt="">
+          <p>밴쯔</p>
+          <p>238만명</p>
+          <div class="profile_circle4">
+            <p>50</p>
+            <p>%</p>
+          </div>
+        </li>
+        <li>
+          <img src="./img/입 짧은 햇님.svg" alt="">
+          <p>입짧은 햇님</p>
+          <p>238만명</p>
+          <div class="profile_circle4">
+            <p>50</p>
+            <p>%</p>
+          </div>
+        </li>
+      </ul>
+    </section>
+
+    <section class="section4 container">
+      <div class="section4_main_txt">
+        <p>모니터링 채널과 비교한 <strong>항목지표 한눈에 보기</strong></p>
+      </div>
+
+      <ul class="section4_graph">
+        <li>
+          <p class="normal">나의 평균 참여도는?</p>
+          <img src="./img/그래프1.svg" alt="">
+          <div class="graph_desc">
+            <div class="arrow">
+              <img src="./img/화살표.svg" alt="">
+            </div>
+            <p>낮음</p>
+          </div>
+        </li>
+        <li>
+          <p class="normal">효과가 높은 영상 길이</p>
+          <img src="./img/그래프2.svg" alt="">
+          <div class="graph_desc2">
+            <div class="tcloud">
+              <p><strong>4~7분</strong></p>
+            </div>
+          </div>
+        </li>
+        <li>
+          <p class="clear">가장 반응 좋은 시간대</p>
+          <img src="./img/그래프3.svg" alt="">
+          <div class="graph_desc3">
+            <p><strong>07:00pm</strong></p>
+          </div>
+        </li>
+        <li>
+          <p class="clear2">광고 콘텐츠 평균 개수</p>
+          <img src="./img/그래프6.svg" alt="">
+          <div class="graph_desc4">
+            <p><strong>1.5개</strong></p>
+          </div>
+        </li>
+        <li>
+          <p class="clear2">평균 월 업로드 수</p>
+          <img src="./img/그래프5.svg" alt="">
+          <div class="graph_desc5">
+            <div class="arrow2">
+              <img src="./img/화살표.svg" alt="">
+            </div>
+            <p>높음</p>
+          </div>
+        </li>
+        <li>
+          <p class="clear2">많이 언급된 단어들</p>
+          <img src="./img/그래프4.svg" alt="">
+          <div class="graph_desc6">
+            <div class="tcloud2">
+              <p>햄최몇</p>
+            </div>
+            <div class="tcloud3">
+              <p>배불리배불리</p>
+            </div>
+            <div class="tcloud4">
+              <p>스타또</p>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </section>
+
+    <section class="section5">
+      <div class="container">
+        <div class="section5_main_txt">
+          <p><strong>모니터링 채널 중</strong> 최고 인기영상 <strong>살펴보기</strong></p>
+        </div>
+        <div class="section5_youtube">
+          <ul class="youtube_wrap">
+            <li>
+              <img src="./img/도티.png" alt="">
+              <p class="name">도티 TV</p>
+              <p class="title">[만약에🤔] 무조건 계획대로만 인생을 산다면 ⏰🕹️</p>
+              <div class="viewdate">
+                <p class="view">조회수 139만회</p>
+                <div class="circle point"></div>
+                <p class="date">2021-08-09</p>
+              </div>
+            </li>
+            <li>
+              <img src="./img/침착맨1.png" alt="">
+              <p class="name">침착맨</p>
+              <p class="title">민트초코로 호들갑 떠는 게 싫다고 했던 사람</p>
+              <div class="viewdate">
+                <p class="view">조회수 40만회</p>
+                <div class="circle point"></div>
+                <p class="date">2021-08-09</p>
+              </div>
+            </li>
+            <li>
+              <img src="./img/bts.png" alt="">
+              <p class="name">BANGTANTV</p>
+              <p class="title">BTS (방탄소년단) Intro: Persona + 상남자(Boy In Luv)</p>
+              <div class="viewdate">
+                <p class="view">조회수 2540만회</p>
+                <div class="circle point"></div>
+                <p class="date">2021-08-09</p>
+              </div>
+            </li>
+            <li>
+              <img src="./img/침착맨2.png" alt="">
+              <p class="name">침착맨</p>
+              <p class="title">세 명인데 피자 한 판만 시켜버림</p>
+              <div class="viewdate clear3">
+                <p class="view">조회수 40만회</p>
+                <div class="circle point"></div>
+                <p class="date">2021-08-09</p>
+              </div>
+            </li>
+            <li>
+              <img src="./img/침착맨3.png" alt="">
+              <p class="name">침착맨</p>
+              <p class="title">침펄풍, 웹툰작가 자존심이 걸린 그림 대결 - 쿵야 캐치마인드</p>
+              <div class="viewdate">
+                <p class="view">조회수 139만회</p>
+                <div class="circle point"></div>
+                <p class="date">2021-08-09</p>
+              </div>
+            </li>
+            <li>
+              <img src="./img/도티.png" alt="">
+              <p class="name">도티 TV</p>
+              <p class="title">[만약에🤔] 무조건 계획대로만 인생을 산다면 ⏰🕹️</p>
+              <div class="viewdate">
+                <p class="view">조회수 139만회</p>
+                <div class="circle point"></div>
+                <p class="date">2021-08-09</p>
+              </div>
+            </li>
+            <li>
+              <img src="./img/침착맨1.png" alt="">
+              <p class="name">침착맨</p>
+              <p class="title">민트초코로 호들갑 떠는 게 싫다고 했던 사람</p>
+              <div class="viewdate">
+                <p class="view">조회수 40만회</p>
+                <div class="circle point"></div>
+                <p class="date">2021-08-09</p>
+              </div>
+            </li>
+            <li>
+              <img src="./img/bts.png" alt="">
+              <p class="name">BANGTANTV</p>
+              <p class="title">BTS (방탄소년단) Intro: Persona + 상남자(Boy In Luv)</p>
+              <div class="viewdate">
+                <p class="view">조회수 2540만회</p>
+                <div class="circle point"></div>
+                <p class="date">2021-08-09</p>
+              </div>
+            </li>
+            <li>
+              <img src="./img/침착맨2.png" alt="">
+              <p class="name">침착맨</p>
+              <p class="title">세 명인데 피자 한 판만 시켜버림</p>
+              <div class="viewdate clear3">
+                <p class="view">조회수 40만회</p>
+                <div class="circle point"></div>
+                <p class="date">2021-08-09</p>
+              </div>
+            </li>
+            <li>
+              <img src="./img/침착맨3.png" alt="">
+              <p class="name">침착맨</p>
+              <p class="title">침펄풍, 웹툰작가 자존심이 걸린 그림 대결 - 쿵야 캐치마인드</p>
+              <div class="viewdate">
+                <p class="view">조회수 139만회</p>
+                <div class="circle point"></div>
+                <p class="date">2021-08-09</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="solid">
+        <img src="./img/실선.png" alt="">
+      </div>
+      <div class="more">
+        <p>더 보기</p>
+        <div class="hexagon">
+          <img src="./img/육각형.svg" alt="">
+          <p class="plus"><i class="ri-add-line"></i></p>
+        </div>
+      </div>
+    </section>
+    <footer>
+      <div class="copy">
+        Copyright
+        &#169; 2024 Hubdnc. All Rights Reserved
+      </div>
+    </footer>
+  </div>
+  <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+
+
+  <script src="./main.js"></script>
+</body>
+
+</html>

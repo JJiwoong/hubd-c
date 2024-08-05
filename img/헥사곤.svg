@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="11" height="12" viewBox="0 0 11 12">
+  <defs>
+    <linearGradient id="linear-gradient" x1="1" y1="0.5" x2="0.056" y2="0.5" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#2ea1d0"/>
+      <stop offset="1" stop-color="#33c2d7"/>
+    </linearGradient>
+  </defs>
+  <path id="hexagon_2_" data-name="hexagon (2)" d="M0,17.875l3-5.5H9l3,5.5-3,5.5H3Z" transform="translate(23.375) rotate(90)" opacity="0.8" fill="url(#linear-gradient)"/>
+</svg>

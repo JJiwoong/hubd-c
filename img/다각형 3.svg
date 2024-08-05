@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="32.222" height="26" viewBox="0 0 32.222 26">
+  <defs>
+    <filter id="다각형_3" x="0" y="0" width="32.222" height="26" filterUnits="userSpaceOnUse">
+      <feOffset dy="3" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feFlood flood-color="#7e878f" flood-opacity="0.188"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g transform="matrix(1, 0, 0, 1, 0, 0)" filter="url(#다각형_3)">
+    <g id="다각형_3-2" data-name="다각형 3" transform="translate(23.22 14) rotate(180)" fill="#fff">
+      <path d="M 13.10880565643311 7.5 L 1.113416075706482 7.5 L 7.111110687255859 0.7525925636291504 L 13.10880565643311 7.5 Z" stroke="none"/>
+      <path d="M 7.111110687255859 1.505196571350098 L 2.226841926574707 7 L 11.99538040161133 7 L 7.111110687255859 1.505196571350098 M 7.111110687255859 0 L 14.2222204208374 8 L 9.5367431640625e-07 8 L 7.111110687255859 0 Z" stroke="none" fill="#eeeff1"/>
+    </g>
+  </g>
+</svg>

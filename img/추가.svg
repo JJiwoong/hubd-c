@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="88" height="98" viewBox="0 0 88 98">
+  <defs>
+    <linearGradient id="linear-gradient" x1="0.5" x2="0.5" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#0d2639"/>
+      <stop offset="1" stop-color="#000a0e"/>
+      <stop offset="1" stop-color="#545454"/>
+    </linearGradient>
+    <filter id="hexagon_2_" x="0" y="0" width="88" height="98" filterUnits="userSpaceOnUse">
+      <feOffset dy="3" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feFlood flood-color="#2ea1d0" flood-opacity="0.231"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="그룹_80" data-name="그룹 80" transform="translate(-1537 -748)" opacity="0.36">
+    <g transform="matrix(1, 0, 0, 1, 1537, 748)" filter="url(#hexagon_2_)">
+      <path id="hexagon_2_2" data-name="hexagon (2)" d="M0,35,20,0H60L80,35,60,70H20Z" transform="translate(9 86) rotate(-90)" fill="url(#linear-gradient)"/>
+    </g>
+    <g id="plus" transform="translate(1570 782.496)">
+      <g id="그룹_79" data-name="그룹 79">
+        <path id="패스_42" data-name="패스 42" d="M12.373,9.627V0H9.627V9.627H0v2.745H9.627V22h2.745V12.373H22V9.627Z" fill="#fff"/>
+      </g>
+    </g>
+  </g>
+</svg>
